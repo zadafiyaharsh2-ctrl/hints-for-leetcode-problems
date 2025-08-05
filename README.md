@@ -13,16 +13,3 @@ This repo does **not provide direct code solutions**, but instead:
 * Breaks down **key observations** and **problem patterns**.
 * Guides you to **think step-by-step** like an experienced competitive programmer.
 * Helps you develop **problem-solving intuition**.
-
-## 🛠 Structure
-
-```plaintext
-/
-├── arrays/
-│   └── two-sum.md
-├── graphs/
-│   └── dijkstra.md
-├── dp/
-│   └── longest-common-subsequence.md
-└── ...
-```
