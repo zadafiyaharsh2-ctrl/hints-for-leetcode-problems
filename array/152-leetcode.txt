@@ -1,0 +1,57 @@
+152. Maximum Product Subarray
+Given an integer array nums, find a subarray that has the largest product, and return the product.
+
+The test cases are generated so that the answer will fit in a 32-bit integer.
+
+Example 1:
+
+Input: nums = [2,3,-2,4]
+Output: 6
+Explanation: [2,3] has the largest product 6.
+Example 2:
+
+Input: nums = [-2,0,-1]
+Output: 0
+Explanation: The result cannot be 2, because [-2,-1] is not a subarray.
+ 
+
+Constraints:
+
+1 <= nums.length <= 2 * 104
+-10 <= nums[i] <= 10
+The product of any subarray of nums is guaranteed to fit in a 32-bit integer.
+
+solution-----------------------------------------------------------------------------------------
+✅ Hint 1: Understand what is being asked
+You're not looking for the sum of a subarray — you're looking for the product.
+The subarray must be contiguous.
+
+✅ Hint 2: Try All Possible Subarrays
+To solve this using brute-force, think:
+Can I try every possible subarray, calculate its product, and track the maximum?
+
+That means:
+
+Pick every possible starting point i.
+
+For each i, extend the subarray to all possible j >= i.
+
+Calculate product of elements between i and j.
+
+✅ Hint 3: Use Nested Loops
+Use two loops:
+
+Outer loop from i = 0 to n-1
+
+Inner loop from j = i to n-1
+
+Maintain a running product while iterating j.
+
+✅ Hint 4: Reset Product at the Start of Each New Subarray
+Before starting the inner loop for a new i, reset the currentProduct to 1.
+
+✅ Hint 5: Handle Negative Numbers
+Negative numbers can turn small values into large positives if multiplied together — so don’t skip them. Brute-force naturally handles this.
+
+✅ Hint 6: Initialize Your Answer with INT_MIN
+To correctly track the maximum, start maximum = INT_MIN.

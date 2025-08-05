@@ -1,0 +1,69 @@
+53. Maximum Subarray
+Given an integer array nums, find the subarray with the largest sum, and return its sum.
+
+ 
+
+Example 1:
+
+Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
+Output: 6
+Explanation: The subarray [4,-1,2,1] has the largest sum 6.
+Example 2:
+
+Input: nums = [1]
+Output: 1
+Explanation: The subarray [1] has the largest sum 1.
+Example 3:
+
+Input: nums = [5,4,-1,7,8]
+Output: 23
+Explanation: The subarray [5,4,-1,7,8] has the largest sum 23.
+ 
+
+Constraints:
+
+1 <= nums.length <= 105
+-104 <= nums[i] <= 104
+ 
+
+Follow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
+----------------------------------------------------------------------------
+
+🪜 Hints to Reach the Final Code
+🔹 Hint 1: Understand the problem
+You are given an array of positive and negative integers.
+
+You need to return the maximum possible sum of any contiguous subarray.
+
+Example: [-2,1,-3,4,-1,2,1,-5,4] → Output: 6 from subarray [4,-1,2,1].
+
+🔹 Hint 2: Brute-force idea
+Try all possible subarrays using 2 nested loops.
+
+Keep track of the sum and update the maximum.
+
+This is O(n²) — slow for large arrays.
+
+🔹 Hint 3: Can we do better?
+Yes — try a single-pass approach.
+
+Keep a running sum of the subarray (currsum).
+
+If the sum becomes negative, reset it to zero.
+
+🔹 Hint 4: Track the maximum
+Use a variable maximum to keep track of the maximum sum found so far.
+
+At each step:
+
+Update currsum by adding the current number.
+
+Update maximum = max(currsum, maximum).
+
+If currsum becomes negative, reset it to 0.
+
+🔹 Hint 5: Think about edge cases
+What if all elements are negative?
+You should still return the maximum among them.
+
+So initialize maximum = INT_MIN instead of 0.
