@@ -1,9 +1,7 @@
 # hints-for-leetcode-problems that i solved
 # 🧠 DSA & Competitive Programming - Solution Hints
 
-Welcome to this repository! This is a personal collection of carefully crafted **solution hints** for popular Data Structures & Algorithms (DSA) problems from platforms like:
-
-* 📌 LeetCode
+Welcome to this repository! This is a personal collection of carefully crafted **solution hints** for popular Data Structures & Algorithms (DSA) problems from platforms 📌 LeetCode
 
 ## 🎯 Purpose
 
