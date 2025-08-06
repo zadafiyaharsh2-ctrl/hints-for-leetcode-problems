@@ -1,0 +1,50 @@
+442. Find All Duplicates in an Array
+Given an integer array nums of length n where all the integers of nums are in the range [1, n] and each integer appears at most twice, return an array of all the integers that appears twice.
+
+You must write an algorithm that runs in O(n) time and uses only constant auxiliary space, excluding the space needed to store the output
+
+ 
+
+Example 1:
+
+Input: nums = [4,3,2,7,8,2,3,1]
+Output: [2,3]
+Example 2:
+
+Input: nums = [1,1,2]
+Output: [1]
+Example 3:
+
+Input: nums = [1]
+Output: []
+ 
+
+Constraints:
+
+n == nums.length
+1 <= n <= 105
+1 <= nums[i] <= n
+Each element in nums appears once or twice.
+--------------------------------------------------------------------------------------------
+Hint 1:
+You are given an array of integers where some elements appear twice and others appear once.
+Your goal is to return all elements that appear exactly twice.
+
+Hint 2:
+To solve this, you need a way to count how many times each number appears.
+-> Use a map (or unordered_map) to count the frequency of each number.
+
+Hint 3:
+Iterate through the array, and for each element:
+- Increase its count in the map.
+
+Hint 4:
+After incrementing the count of the current number,
+-> Check if the count becomes exactly 2.
+-> If so, add it to the answer vector.
+
+Hint 5:
+Avoid adding elements whose count is more than 2 — only add the ones that appear exactly twice.
+
+Hint 6:
+Return the vector containing all such duplicate elements.
