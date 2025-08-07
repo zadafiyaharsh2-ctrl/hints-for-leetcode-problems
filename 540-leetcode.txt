@@ -1,0 +1,33 @@
+540. Single Element in a Sorted Array
+You are given a sorted array consisting of only integers where every element appears exactly twice, except for one element which appears exactly once.
+
+Return the single element that appears only once.
+
+Your solution must run in O(log n) time and O(1) space.
+
+ 
+
+Example 1:
+
+Input: nums = [1,1,2,3,3,4,4,8,8]
+Output: 2
+Example 2:
+
+Input: nums = [3,3,7,7,10,11,11]
+Output: 10
+ 
+
+Constraints:
+
+1 <= nums.length <= 105
+0 <= nums[i] <= 105
+--------------------------------------------------------------------------------------------------
+Hints
+1.  The problem statement specifies that every element appears exactly twice, except for one element which appears
+exactly once. This means that the single element will be the one that doesn't have a pair
+2.  We can use a modified binary search approach to find the single element. The idea is
+to find the middle element of the array and compare it with its pair. If the pair exists,
+it will be at the same index in the next half of the array. If the pair doesn't
+exist, the single element will be at the same index in the next half of the array.
+3.  We can use a while loop to continue the binary search until we find the single element
+4.  We can use the fact that the array is sorted to our advantage. We can Use the fact that the array is sorted to our advantage.
